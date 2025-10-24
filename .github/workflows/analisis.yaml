@@ -1,0 +1,24 @@
+name: Simple Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Say hello
+      run: echo "🎉 ¡Hola! El workflow se ejecutó correctamente"
+      
+    - name: Show repository info
+      run: |
+        echo "Repositorio: $GITHUB_REPOSITORY"
+        echo "Commit: $GITHUB_SHA"
+        echo "Ejecutado por: $GITHUB_ACTOR"y"

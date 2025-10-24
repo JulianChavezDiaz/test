@@ -1,6 +1,6 @@
 name: Python Tests
 
-# Ejecutar cuando haya push o pull_request
+
 on:
   push:
     branches: [ main ]
